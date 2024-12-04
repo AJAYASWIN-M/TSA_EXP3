@@ -51,7 +51,8 @@ acf_values = compute_acf(normalized_price, 34)
 
 # Plot the ACF results
 plt.figure(figsize=(10, 6))
-plt.stem(lags, acf_values, use_line_collection=True)
+plt.stem(lags, acf_values) # Remove the argument
+
 plt.title('Autocorrelation Function (ACF) for Petrol Price')
 plt.xlabel('Lag')
 plt.ylabel('ACF')
